@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<script>
+$(document).ready(function() {
+  $("#add_symbol").click(function() {
+    $('.ui.modal').modal('show');
+  });
+
+  $("#save").click(function() {
+
+    var textareaContent = $("#symbols").val();
+    var symbols = textareaContent.split("\n");
+
+    for (var i = 0; i < symbols.length; ++i) {
+      console.log(symbols[i]);
+
+      $.ajax({
+        url: '/stock',
+        type: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify({ "symbol": symbols[i] }),
+        dataType: 'json'
+      });
+    }
+
+    $('.ui.modal').modal('hide');
+  });
+});
+</script>
+
+
+<button id="add_symbol" class="ui button secondary">Add Symbols</button>
+<table class="ui inverted table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Symbol</th>
+      <th>openprice</th>
+      <th>lastprice</th>
+      <th>lowprice</th>
+        <th>highprice</th>
+        <th>changeusd</th>
+        <th>changeprecent</th>
+
+    </tr>
+  </thead>
+  <tbody>
+  {% for stock in stocks %}
+  <tr>
+    <td>{{ stock.id }}</td>
+    <td>{{ stock.symbol }}</td>
+    <td>{{ stock.openprice }}</td>
+    <td>{{ stock.lastprice }}</td>
+    <td>{{ stock.lowprice }}</td>
+      <td>{{ stock.highprice }}</td>
+      <td>{{ stock.changeusd }}</td>
+      <td>{{ stock.changeprecent }}</td>
+
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+<div class="ui modal">
+    <i class="close icon"></i>
+    <div class="header">
+      Add Stocks
+    </div>
+    <div class="content">
+        <div class="ui form">
+            <div class="field">
+              <label>Symbols</label>
+              <textarea id="symbols"></textarea>
+            </div>
+          </div>
+    </div>
+    <div class="actions">
+      <div id="save" class="ui positive right labeled icon button">
+        Add Symbols
+        <i class="plus icon"></i>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
