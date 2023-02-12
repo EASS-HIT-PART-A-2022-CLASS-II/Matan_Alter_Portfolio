@@ -5,9 +5,9 @@ Simple and helpful stock screen!
 just add your favorit stocks and get a lots of Important knowledge
 
 ##Technology
-*Backend using python 3.9 & FastAPI 0.88.0
-*Frontend using Html and JS
-*Database using SQL-Lite3
+* Backend using python 3.9 & FastAPI 0.88.0
+* Frontend using Html and JS
+* Database using SQL-Lite3
 ## feature
 My Stock Screener will show you the follow:
 * Stock Open Price
