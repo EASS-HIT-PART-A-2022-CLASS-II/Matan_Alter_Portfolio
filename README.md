@@ -19,8 +19,7 @@ My Stock Screener will show you the follow:
 * Stock Change in percentage 
 
 
-
-
+# Quick Demo
 
 https://user-images.githubusercontent.com/83552555/218327402-b045dcdb-fef2-416b-8c05-33dca74c01d3.mp4
 
