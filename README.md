@@ -17,3 +17,6 @@ My Stock Screener will show you the follow:
 * Stock Last Price
 * Stock Change in USD
 * Stock Change in percentage 
+
+
+[![asciicast](https://user-images.githubusercontent.com/83552555/218327257-326dd82e-82d7-4263-a675-dd86e10c7afd.mp4)
