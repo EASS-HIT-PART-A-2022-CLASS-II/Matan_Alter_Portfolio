@@ -1,4 +1,4 @@
-<img src="https://github.com/EASS-HIT-PART-A-2022-CLASS-II/Matan_Alter_StockScreen/issues/2#issue-1581334315"
+<img src="https://user-images.githubusercontent.com/83552555/218325612-75dcec81-2679-456c-be75-be240105f369.png"
 
 # Master Stock Screener
 Simple and helpful stock screen!
